@@ -46,6 +46,9 @@
 .clicked {
   color: black; }
 
+.selected {
+  background-color: darkseagreen; }
+
 .pokemons__button {
   text-align: center;
   width: 85.5%;

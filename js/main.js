@@ -31,6 +31,15 @@ angular.module('pokedex', ['ngRoute']);
             $scope.shownDesc = false;
         };
 
+        $scope.isSelected = function (id) {
+            if ($scope.selectedPokemon) {
+                if ($scope.selectedPokemon.pkdx_id == id) {
+                    return true;
+                }
+            }
+            return false;
+        };
+
         $scope.showDesc = function () {
             if ($scope.selectedPokemon != undefined) {
                 $scope.shownDesc = true;
@@ -64,6 +73,15 @@ angular.module('pokedex', ['ngRoute']);
         $scope.choosePokemon = function (pokemon) {
             $scope.selectedPokemon = pokemon;
             $scope.shownDesc = false;
+        };
+
+        $scope.isSelected = function (id) {
+            if ($scope.selectedPokemon) {
+                if ($scope.selectedPokemon.pkdx_id == id) {
+                    return true;
+                }
+            }
+            return false;
         };
 
         $scope.showDesc = function () {

@@ -1,6 +1,6 @@
 <section class="col-sm-8 col-xs-6 pokemons">
     <div class="row">
-        <div class="pokemons-item col-sm-4 col-md-3" ng-repeat="pokemon in likedPokemons">
+        <div class="pokemons-item col-sm-4 col-md-3" ng-class="{selected: isSelected(pokemon.pkdx_id)}" ng-repeat="pokemon in likedPokemons">
             <a class="pokemon__click-area" href="" ng-click="choosePokemon(pokemon)">
                 <img class="pokemons-item__image" ng-src="../images/{{pokemon.pkdx_id}}.png">
             </a>
