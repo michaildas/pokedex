@@ -1,0 +1,25 @@
+<section class="col-sm-8 col-xs-6 pokemons">
+    <div class="row">
+        <div class="pokemons-item col-sm-4 col-md-3" ng-repeat="pokemon in likedPokemons">
+            <a class="pokemon__click-area" href="" ng-click="choosePokemon(pokemon)">
+                <img class="pokemons-item__image" ng-src="../images/{{pokemon.pkdx_id}}.png">
+            </a>
+            <h3 class="pokemons-item__title">{{pokemon.name}}</h3>
+            <div class="row pokemons-item__types">
+                <div class="pokemons-item__type pokemons-item__type_{{type.name}} col-xs-5"
+                     ng-repeat="type in pokemon.types">{{type.name}}
+                </div>
+            </div>
+            <div class="short-description">
+                <div class="short-description_item" ng-repeat="item in mobile.description| limitTo: 3">{{item}}
+                </div>
+            </div>
+            <a class="pokemon__click-area" href="" ng-click="addPokemonToFavorites(pokemon)">
+                <span class="glyphicon glyphicon-heart pokemons-item__like"
+                      ng-class="{clicked: isLiked(pokemon.pkdx_id)}"></span>
+            </a>
+        </div>
+        <button type="button" class="btn btn-primary pokemons__button" ng-click="showDesc()">Load more</button>
+    </div>
+</section>
+<pokemon-desc></pokemon-desc>

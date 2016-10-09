@@ -1,0 +1,42 @@
+<section class="pokemon-desc col-sm-3 col-xs-6" ng-show="shownDesc">
+    <img class="pokemon-desc__image" ng-src="/images/{{selectedPokemon.pkdx_id}}.png" alt="">
+    <h4 class="pokemon-desc__name">{{selectedPokemon.name}} #{{selectedPokemon.pkdx_id}}</h4>
+    <table class="pokemon-desc__table">
+        <tr>
+            <th>Type</th>
+            <th>Fire</th>
+        </tr>
+        <tr>
+            <td>Attack</td>
+            <td>{{selectedPokemon.attack}}</td>
+        </tr>
+        <tr>
+            <td>Defense</td>
+            <td>{{selectedPokemon.defense}}</td>
+        </tr>
+        <tr>
+            <td>HP</td>
+            <td>{{selectedPokemon.hp}}</td>
+        </tr>
+        <tr>
+            <td>SP Attack</td>
+            <td>{{selectedPokemon.sp_atk}}</td>
+        </tr>
+        <tr>
+            <td>SP Defence</td>
+            <td>{{selectedPokemon.sp_def}}</td>
+        </tr>
+        <tr>
+            <td>Speed</td>
+            <td>{{selectedPokemon.speed}}</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>{{selectedPokemon.weight}}</td>
+        </tr>
+        <tr>
+            <td>Total moves</td>
+            <td>{{selectedPokemon.moves.length}}</td>
+        </tr>
+    </table>
+</section>

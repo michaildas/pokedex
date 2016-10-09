@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="pokedex">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My pokedex</title>
+
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+<header class="container header">
+    <div class="row">
+        <nav class="navbar navbar-inverse" ng-controller="NavigationController as navCtrl">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active: isSelected(1)}">
+                    <a href="/#/all-pokemons" ng-click="selectTab(1)">Все покемоны</a>
+                </li>
+                <li ng-class="{active: isSelected(2)}">
+                    <a href="/#/liked-pokemons" ng-click="selectTab(2)">Понравившиеся покемоны</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="title-container">
+            <h1 class="header__title">Pokedex</h1>
+        </div>
+    </div>
+</header>
+
+
+<main role="main" class="container">
+    <div class="row">
+        <div ng-view></div>
+    </div>
+</main>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/angular.js"></script>
+<script src="js/vendor/angular-route.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>

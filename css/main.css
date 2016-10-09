@@ -1,0 +1,109 @@
+.title-container {
+  margin: auto;
+  text-align: center; }
+
+.header__title {
+  display: inline-block;
+  border: 1px solid grey;
+  padding: 1% 8%;
+  margin-bottom: 40px;
+  font-size: 35px; }
+
+.pokemon__click-area {
+  display: inline-block; }
+
+.pokemons-item {
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  padding-bottom: 5px; }
+  .pokemons-item__title {
+    margin: 0 0 10px; }
+  .pokemons-item__type {
+    text-transform: capitalize;
+    margin-right: 5%;
+    border-radius: 5px;
+    margin-bottom: 10px; }
+    .pokemons-item__type:first-child {
+      margin-left: 5%; }
+    .pokemons-item__type_poison {
+      background-color: green; }
+    .pokemons-item__type_water {
+      background-color: lightblue; }
+    .pokemons-item__type_flying {
+      background-color: orange; }
+    .pokemons-item__type_bug {
+      background-color: yellow; }
+    .pokemons-item__type_normal {
+      background-color: red; }
+  .pokemons-item__like {
+    font-size: 30px;
+    color: grey; }
+    .pokemons-item__like:active {
+      transform: scale(1.2, 1.2); }
+
+.clicked {
+  color: black; }
+
+.pokemons__button {
+  text-align: center;
+  width: 85.5%;
+  border-radius: 10px;
+  font-size: 21px;
+  text-transform: capitalize; }
+
+.pokemon-desc {
+  position: fixed;
+  top: 24.5%;
+  left: 62%;
+  border: 1px solid black;
+  text-align: center; }
+
+.pokemon-desc__name {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 0; }
+
+.pokemon-desc__table {
+  border: 1px solid black;
+  margin: 0 auto 20px;
+  width: 80%; }
+  .pokemon-desc__table th {
+    text-align: center; }
+  .pokemon-desc__table tr {
+    border-top: 1px solid black; }
+  .pokemon-desc__table td:nth-child(n+1), .pokemon-desc__table th:first-child {
+    border-right: 1px solid black; }
+
+@media (max-width: 1199px) {
+  .pokemons__button {
+    width: 87.5%; } }
+
+@media (max-width: 991px) {
+  .pokemons__button {
+    width: 74.5%; } }
+
+@media (max-width: 767px) {
+  .pokemon-desc {
+    top: 30%;
+    left: 50%;
+    width: 40%; }
+  .pokemons__button {
+    width: 89.5%; } }
+
+@media (max-width: 425px) {
+  .pokemons__button {
+    width: 100%; }
+  .pokemon-desc {
+    margin-left: 20px; }
+  .pokemons-item {
+    padding: 0 0 5px;
+    margin-right: 0; }
+  .pokemons-item__type {
+    width: 60%;
+    margin: auto;
+    float: none;
+    margin-bottom: 5px; }
+    .pokemons-item__type:first-child {
+      margin: 0 auto 5px; } }

@@ -1,0 +1,31 @@
+.pokemon-desc {
+  position: fixed;
+  top: 24.5%;
+  left: 62%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.pokemon-desc__name {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.pokemon-desc__table {
+  border: 1px solid black;
+  margin: 0 auto 20px;
+  width: 80%;
+  & th {
+    text-align: center;
+  }
+
+  & tr {
+    border-top: 1px solid black;
+  }
+
+  & td:nth-child(n+1), & th:first-child  {
+    border-right: 1px solid black;
+  }
+
+}

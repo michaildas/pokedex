@@ -1,0 +1,65 @@
+.pokemon__click-area {
+  display: inline-block;
+}
+
+.pokemons-item {
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  padding-bottom: 5px;
+
+  &__title {
+    margin: 0 0 10px;
+  }
+
+  &__type {
+    text-transform: capitalize;
+    margin-right: 5%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    &:first-child {
+      margin-left: 5%;
+    }
+    &_poison {
+      background-color: green;
+    }
+
+    &_water {
+      background-color: lightblue;
+    }
+
+    &_flying {
+      background-color: orange;
+    }
+
+    &_bug {
+      background-color: yellow;
+    }
+
+    &_normal {
+      background-color: red;
+    }
+  }
+
+  &__like {
+    font-size: 30px;
+    color: grey;
+
+    &:active {
+      transform: scale(1.2,1.2);
+    }
+  }
+}
+
+.clicked {
+  color: black;
+}
+
+.pokemons__button {
+  text-align: center;
+  width: 85.5%;
+  border-radius: 10px;
+  font-size: 21px;
+  text-transform: capitalize;
+}
