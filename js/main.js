@@ -76,9 +76,11 @@ angular.module('pokedex', ['ngRoute']);
             if (localStorage.getItem(id)) {
                 return true;
             } else {
-                if ($scope.selectedPokemon.pkdx_id == id) {
-                    $scope.selectedPokemon = undefined;
-                    $scope.shownDesc = false;
+                if ($scope.selectedPokemon != undefined) {
+                    if ($scope.selectedPokemon.pkdx_id == id) {
+                        $scope.selectedPokemon = undefined;
+                        $scope.shownDesc = false;
+                    }
                 }
                 for (var i = 0; i <= $scope.likedPokemons.length; i++) {
                     if ($scope.likedPokemons[i].pkdx_id == id) {
