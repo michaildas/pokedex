@@ -4,14 +4,14 @@ angular.module('pokedex', ['ngRoute']);
 
 (function () {
     angular.module('pokedex').controller('NavigationController', ["$scope", function ($scope) {
-        $scope.link = 1;
+        $scope.tab = 1;
 
         $scope.selectTab = function (setTab) {
-            this.tab = setTab;
+            $scope.tab = setTab;
         };
 
         $scope.isSelected = function (checkTab) {
-            return this.tab === checkTab;
+            return $scope.tab === checkTab;
         };
     }]).controller('PokemonsController', ["$scope", "$http", "$routeParams", function ($scope, $http, $routeParams) {
         $scope.pokemons = [];
